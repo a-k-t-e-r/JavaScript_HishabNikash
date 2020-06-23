@@ -1,0 +1,105 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head>
+    <title>Hishab-Nikash: A Budget Analysis Application</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Hishab-Nikash: A Budget Analysis Application" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Muhammad Akhtar Hussein" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="icon" type="image/x-icon" href="./project-icon.ico" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300&family=Righteous&family=Josefin+Sans&family=Dancing+Script&family=Piedra&display=swap"
+        rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./Hishab-Nikash.css">
+</head>
+
+<body>
+    <div class="main-panel">
+        <section class="project-title">
+            <div class="title">Hishab-Nikash</div>
+            <div class="motto">- A Budget Analysis Application</div>
+        </section>
+
+        <section class="budge-amount">
+            <div class="budge-amount__date">Available Budget in %Month%, %year%</div>
+            <div class="budge-amount__number">+ 0.00</div>
+        </section>
+
+        <section class="total">
+            <div class="total-income">
+                <span class="total-income__name">INCOME</span>
+                <span class="total-income__value">+ 0.00</span>
+            </div>
+            <div class="total-expense">
+                <span class="total-expense__name">EXPENSES</span>
+                <span class="total-expense__value">- 0.00
+                    <span class="total-expense__percent" title="(totalExpense/totalIncome)*100">0%</span>
+                </span>
+            </div>
+        </section>
+    </div>
+    <section class="user-control">
+        <input type="text" id="user-control__desc" class="user-control__desc"
+            placeholder="INCOME OR, EXPENSE DESCRIPTION" />
+        <input type="number" id="user-control__value" class="user-control__value" placeholder="AMOUNT IN BDT " />
+        <input type="button" value="+" class="user-control__incomeButton" />
+        <input type="button" value="-" class="user-control__expenseButton" />
+        <input type="button" value="generate report" class="user-control__reportGenerate" />
+    </section>
+
+    <section class="data-lists">
+        <div class="data-lists__income">
+            <div class="data-lists__income-head">INCOME</div>
+            <!--
+            <div class="data-lists__income-body" id="income-%id%">
+                <span class="income-body__desc">%description%</span>
+                <span class="income-body__value">+ %value%
+                    <button type="button" class="income-delete">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </span>
+            </div>
+            -->
+        </div>
+        <div class="data-lists__expense">
+            <div class="data-lists__expense-head">EXPENSE</div>
+            <!--
+            <div class="data-lists__expense-body" id="expense-%id%">
+                <span class="expense-body__desc">%description%</span>
+                <span class="expense-body__value">- %value%
+                    <span class="expense-percent" title="(selectedExpense/totalIncome)*100">%percentage%</span>
+                    <button type="button" class="expense-delete">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </span>
+            </div>
+            -->
+        </div>
+    </section>
+    <section class="maker-desc">
+        <hr />
+        <div class="maker-name">Muhammad Akhtar Hussein</div>
+        <div class="maker-company">Angko_Bidda Enterprise</div>
+    </section>
+
+    <!-- REPORT DESIGN -->
+    <div id="HTMLtoPDF" style="display: none;">
+        <section class="report-section">
+            <div class="report-title">Hishab-Nikash</div>
+            <div class="report-motto">- A Budget Analysis Application</div>
+            <div class="report-budge">Available Budget of %Month%, %year% = %amount%</div>
+        </section>
+    </div>
+
+    <script type="application/javascript" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script type="application/javascript" src="./jspdf.min.js"></script>
+    <script type="application/javascript" src="./Hishab-Nikash.js"></script>
+</body>
+
+</html>

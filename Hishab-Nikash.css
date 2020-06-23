@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+}
+
+.main-panel {
+    height: 44vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('./back.jpg');
+    color: white;
+}
+
+.project-title .title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    text-align: center;
+}
+
+.project-title .motto {
+    font-family: 'Piedra', cursive;
+    font-size: 1.1rem;
+    text-align: right;
+    margin-right: 25rem;
+}
+
+.budge-amount {
+    margin: 1rem 0 0.6rem 0;
+    text-align: center;
+}
+
+.budge-amount__date {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3rem;
+}
+
+.budge-amount__number {
+    font-family: 'Righteous', cursive;
+    font-size: 3.2rem;
+    margin-top: 3px;
+}
+
+.total {
+    margin: 0 35rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.total-income {
+    background-color: #3ab8b3;
+    padding: 0.9rem;
+}
+
+.total-income__name,
+.total-expense__name {
+    letter-spacing: 0.1rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.total-income__value,
+.total-expense__value {
+    float: right;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    font-family: 'Righteous', cursive;
+    vertical-align: middle;
+}
+
+.total-income__value {
+    margin-right: 2.8rem;
+}
+
+.total-expense {
+    background-color: #FF5049;
+    margin-top: 1rem;
+    padding: 0.9rem;
+}
+
+.total-expense__percent {
+    padding: 0.2rem;
+    margin-left: 10px;
+    background-color: black;
+    font-size: 0.7rem;
+    vertical-align: middle;
+}
+
+.user-control {
+    padding: 0.6rem;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.user-control__desc,
+.user-control__value {
+    border: none;
+    outline: none;
+    width: 400px;
+    height: 30px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.user-control__value {
+    margin-left: 2rem;
+    text-align: right;
+    width: 220px;
+    font-family: 'Righteous', cursive;
+    letter-spacing: 0.2rem;
+}
+
+.user-control__desc:focus,
+.user-control__value:focus {
+    border: 1px solid red;
+}
+
+/*
+input[type=button]:disabled {
+    border: 1px solid #e7e7e7;
+    color: #e7e7e7;
+}
+*/
+
+.user-control__incomeButton,
+.user-control__expenseButton {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 2rem;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #28B9B5;
+    color: #28B9B5;
+    border-radius: 50%;
+    margin-left: 2rem;
+}
+
+.user-control__expenseButton {
+    border: 1px solid #FF5049;
+    color: #FF5049;
+}
+
+.user-control__incomeButton:hover {
+    background-color: rgba(0, 128, 0, 0.1);
+}
+
+.user-control__expenseButton:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.user-control__reportGenerate {
+    float: right;
+    width: 10rem;
+    height: 2rem;
+    font-size: 0.9rem;
+    background: none;
+    border: none;
+    outline: none;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 3s, color 3s, border 3s, border-radius 3s, font-size 3s;
+}
+
+.user-control__reportGenerate:hover {
+    font-size: 1rem;
+    text-transform: capitalize;
+    border-radius: 40%;
+    background: black;
+    border: 1px solid red;
+    color: white;
+}
+
+.data-lists {
+    margin: 1.5rem 3rem 0 3rem;
+}
+
+.data-lists__income,
+.data-lists__expense {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 2rem;
+    width: 80vh;
+}
+
+.data-lists__income-head,
+.data-lists__expense-head {
+    color: #28B9B5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    padding: 0.8rem 0;
+}
+
+.data-lists__expense-head {
+    color: #FF5049;
+}
+
+.data-lists__income-body,
+.data-lists__expense-body {
+    padding: 0.8rem 0.5rem;
+    transition: border-radius 1s;
+}
+
+.data-lists__income-body:nth-of-type(odd) {
+    background-color: #f7f7f7;
+}
+
+.data-lists__expense-body:nth-of-type(even) {
+    background-color: #f7f7f7;
+}
+
+.data-lists__income-body:hover {
+    border-top: 2px solid #28B9B5;
+    border-bottom: 2px solid #28B9B5;
+    border-radius: 20%;
+}
+
+.data-lists__expense-body:hover {
+    border-top: 2px solid #FF5049;
+    border-bottom: 2px solid #FF5049;
+    border-radius: 20%;
+}
+
+.income-body__value,
+.expense-body__value {
+    float: right;
+}
+
+.income-body__desc,
+.income-body__value,
+.expense-body__desc,
+.expense-body__value {
+    color: #555;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.income-body__value {
+    color: #28B9B5;
+}
+
+.expense-body__value {
+    color: #FF5049;
+}
+
+.income-delete {
+    border: none;
+    outline: none;
+    font-size: 23px;
+    color: #28B9B5;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 6px;
+    display: none;
+    transition: display 2s;
+}
+
+.data-lists__income-body:hover .income-delete {
+    display: inline-block;
+}
+
+.expense-percent {
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+    background-color: yellow;
+}
+
+.expense-delete {
+    border: none;
+    outline: none;
+    font-size: 23px;
+    color: #FF5049;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 6px;
+    display: none;
+}
+
+.data-lists__expense-body:hover .expense-delete {
+    display: inline-block;
+}
+
+.maker-desc {
+    margin: 11.8rem 3rem 0 3rem;
+    text-align: center;
+}
+
+.maker-name {
+    font-size: 1.8rem;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 0.4rem;
+}
+
+.maker-company {
+    font-size: 1.1rem;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 0.3rem;
+    margin-bottom: 0.9rem;
+}
